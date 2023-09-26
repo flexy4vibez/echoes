@@ -1,0 +1,67 @@
+.body_background 
+{
+    background-color: #666666;
+}
+
+.nav_background 
+{
+    background-color: #13131A;
+}
+
+.top_nav_sticky
+{
+    position: sticky;
+    top: 0%;
+    z-index: 10;
+}
+
+.text_orange
+{
+    color: #FF7F50;
+}
+
+.background_orange
+{
+    background-color: #FF7F50;
+}
+
+.footer_background
+{
+    background-color: #973224;
+}
+
+.background_blue
+{
+    background-color: #253E7E;
+}
+
+.line
+{
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid black; 
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+
+.line_text
+{
+    background:white; 
+    padding:0 10px;
+}
+
+.z_index_1
+{
+    z-index:1;
+}
+
+.z_index_2
+{
+    z-index:5;
+}
+
+.z_index_3
+{
+    z-index:3;
+}
+
