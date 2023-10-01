@@ -5,21 +5,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $sql_query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+    $sql_query = "SELECT * FROM users WHERE email = '$email'";
     $result = mysqli_query($con, $sql_query);
 
     if (mysqli_num_rows($result) > 0) {
         $record_found = mysqli_fetch_assoc($result);
         $_SESSION["record_found"] = $record_found;
+
+        $match_password = password_verify($password, $_SESSION["record_found"]["password"]);
     }
 
-    if (!empty($_SESSION["record_found"])) {
+    if (!empty($_SESSION["record_found"]) && $match_password) {
         header("location: index.php");
     } else {
-        header("location: signin.php");
+        $error = "Wrong email or password. Check and try again.";
     }
     
 }
+
+
 
 ?>
 
@@ -39,12 +43,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="container-fluid">
 
     <!-- All content -->
-    
+
+        <!-- Signup Status -->
         <div class="col-sm-4 mx-auto">
             <h3 class="text-center text-success">
             <?php
             if (!empty($_SESSION["signup_status"])) {
             echo $_SESSION["signup_status"];
+            session_destroy();
+            }
+            ?>
+            </h3>
+        </div>
+
+        <!-- Signin Error -->
+        <div class="col-sm-4 mx-auto">
+            <h3 class="text-center text-danger">
+            <?php
+            if (!empty($error)) {
+            echo $error;
             session_destroy();
             }
             ?>

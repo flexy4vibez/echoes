@@ -1,8 +1,3 @@
-<?php
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +15,7 @@
 <!-- Recent Uploads Div -->
     <div class="col-sm-12 row justify-content-between text-white mt-3">
         <div class="col-sm-3"><h4 style="font-family: 'Pacifico', cursive;">Recent Uploads</h4></div>
-        <div class="col-sm-3"><h4>SEE ALL</h4></div>
+        <div class="col-sm-3"><a style="text-decoration: none; color: white;" href="all_songs.php"><h4>SEE ALL</h4></a></div>
     </div>
     
     <!-- List of Albums -->
@@ -245,7 +240,24 @@
 
     </div>
 
-    <!-- Footer -->
+    <?php if (!empty($_SESSION["record_found"])): ?>
+    <!-- Footer signed in -->
+    <div class="container-fluid row justify-content-between text-white px-o" style="background: #000000;">
+        <div class="col-sm-3">
+            <p class="pb-2">Lorem Ipsum</p>
+        </div>
+
+        <div class="col-sm-5">
+            <audio src="" controls></audio>
+        </div>
+            
+        <div class="col-sm-3">
+            <p>Echo Invite friends</p>
+        </div>
+    </div>
+    <?php else: ?>
+
+    <!-- Footer Not signed in -->
     
     <div class="container-fluid row justify-content-between footer_background text-white px-o">
         <div class="col-sm-4">
@@ -254,9 +266,10 @@
         </div>
             
         <div class="col-sm-2">
-            <a href="{{url('sign_up')}}" class="btn btn-outline-danger background_orange text-white mt-4 rounded-pill">Sign up free</a>
+            <a href="signup.php" class="btn btn-outline-danger background_orange text-white mt-4 rounded-pill">Sign up free</a>
         </div>
     </div>
+    <?php endif; ?>
     
     <!-- Closing -->
     </div>
@@ -264,8 +277,6 @@
     
 </div>
 
-
-    
 
     
 </body>

@@ -6,7 +6,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = addslashes($_POST["password"]);
     $nickname = addslashes($_POST["nickname"]);
 
-    $sql_query = "INSERT INTO users (email, password, nickname) VALUES ('$email', '$password', '$nickname')";
+    // Encrypt Password
+    $encrypted_password = password_hash($password, PASSWORD_BCRYPT);
+
+    $sql_query = "INSERT INTO users (email, password, nickname) VALUES ('$email', '$encrypted_password', '$nickname')";
     $result = mysqli_query($con, $sql_query);
 
     header("location: signin.php");

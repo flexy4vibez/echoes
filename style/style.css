@@ -65,3 +65,9 @@
     z-index:3;
 }
 
+.no_decoration 
+{
+    text-decoration: none;
+    color: white;
+}
+
