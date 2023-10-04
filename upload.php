@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql_query = "INSERT INTO songs (genre, title, artist, cover_art, song) VALUES ('$genre', '$title', '$artist', '$cover_art', '$song')";
     $result = mysqli_query($con, $sql_query);
 
-    header("location: index.php");
+    header("location: all_songs.php");
     
 }
 

@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="col-4">
-                    <img src="images/play.png" class="img-fluid" alt="play">
+                    <a href="#play"><img src="images/play.png" class="img-fluid" alt="play"></a>
                 </div>
             </div>
 
@@ -160,7 +160,7 @@
     <!-- Artists -->
     <div class="col-sm-12 row justify-content-between text-white">
         <div class="col-sm-3"><h4 style="font-family: 'Pacifico', cursive;">Artists</h4></div>
-        <div class="col-sm-3"><h4>SEE ALL</h4></div>
+        <div class="col-sm-3"><a style="text-decoration: none; color: white;" href="all_artists.php"><h4>SEE ALL</h4></a></div>
     </div>
 
     <!-- Row 2 Artists -->
@@ -240,37 +240,10 @@
 
     </div>
 
-    <?php if (!empty($_SESSION["record_found"])): ?>
-    <!-- Footer signed in -->
-    <div class="container-fluid row justify-content-between text-white px-o" style="background: #000000;">
-        <div class="col-sm-3">
-            <p class="pb-2">Lorem Ipsum</p>
-        </div>
-
-        <div class="col-sm-5">
-            <audio src="" controls></audio>
-        </div>
-            
-        <div class="col-sm-3">
-            <p>Echo Invite friends</p>
-        </div>
+    <div id="play">
+    <?php include "footer.php"; ?>
     </div>
-    <?php else: ?>
 
-    <!-- Footer Not signed in -->
-    
-    <div class="container-fluid row justify-content-between footer_background text-white px-o">
-        <div class="col-sm-4">
-            <p class="py-2" style="font-family: 'Pacifico', cursive;">welcome to echoes</p>
-            <p class="pb-2">Sign up and get unlimited songs</p>
-        </div>
-            
-        <div class="col-sm-2">
-            <a href="signup.php" class="btn btn-outline-danger background_orange text-white mt-4 rounded-pill">Sign up free</a>
-        </div>
-    </div>
-    <?php endif; ?>
-    
     <!-- Closing -->
     </div>
 

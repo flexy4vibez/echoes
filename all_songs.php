@@ -11,15 +11,15 @@
 <body>
 <?php 
 include "header.php";
+
+
+
 ?>
 
-<!-- Test Loop -->
-
-
-
+<!-- Songs Display Loop -->
 <div class="col-12 mx-auto row justify-content-between">
     <?php
-    $id = 11;
+    $id = 1;
     while ($id <= 2000):
 
     $sql_query = "SELECT * from songs WHERE id = '$id'";
@@ -27,7 +27,9 @@ include "header.php";
 
     if (mysqli_num_rows($result) > 0):
     $data_fetched = mysqli_fetch_assoc($result);
+    $track_id = $data_fetched["id"];
     ?>
+    
     <div class="col-sm-3 mt-3" style="position: relative;">
         <img src="<?php echo $data_fetched["cover_art"]; ?>" alt="" width="1000" class="img-fluid">
 
@@ -39,7 +41,7 @@ include "header.php";
                 </div>
 
                 <div class="col-4">
-                    <img src="images/play.png" class="img-fluid" alt="play">
+                    <a href="decoy.php?track=<?php echo $track_id; ?>"><img src="images/play.png" class="img-fluid" alt="play"></a>
                 </div>
         </div>
 
@@ -54,27 +56,18 @@ include "header.php";
     $id++;
     endwhile;
     ?>
+
     
 </div>
 
-
-
-
+    <?php
     
 
-    
+    ?>
 
     <!-- Footer -->
-    
-    <div class="container-fluid row justify-content-between footer_background text-white px-o">
-        <div class="col-sm-4">
-            <p class="py-2" style="font-family: 'Pacifico', cursive;">welcome to echoes</p>
-            <p class="pb-2">Sign up and get unlimited songs</p>
-        </div>
-            
-        <div class="col-sm-2">
-            <a href="{{url('sign_up')}}" class="btn btn-outline-danger background_orange text-white mt-4 rounded-pill">Sign up free</a>
-        </div>
+    <div id="play">
+        <?php include "footer.php"; ?>
     </div>
     
     <!-- Closing -->
