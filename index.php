@@ -24,18 +24,18 @@
 
         <!-- Row 1 first div -->
         <div class="col-sm-3" style="position: relative;">
-            <img src="images/track1.png" alt="" class="img-fluid mt-3">
-            <img src="images/album_background2.png" alt="" class="img-fluid">
+            <img src="images/track1.png" alt="" class="img-fluid mt-3 rounded-top">
+            <img src="images/album_background2.png" alt="" class="img-fluid rounded-bottom">
             
             <!-- Song title -->
             <div class="col-12 row justify-content-between text-white fw-bold" style="position: absolute; top:10%;">
                 <div class="col-8">
-                    <p>My Love ft Craig</p>
-                    <p>ZEE ANGEL</p>
+                    <p>Rush</p>
+                    <p>AYRA STAR</p>
                 </div>
 
                 <div class="col-4">
-                    <a href="#play"><img src="images/play.png" class="img-fluid" alt="play"></a>
+                    <a href="decoy2.php?track=9"><img src="images/play.png" class="img-fluid" alt="play"></a>
                 </div>
             </div>
 
@@ -49,7 +49,7 @@
 
                 <div class="col-5">
                     <p>R&B</p>
-                    <p>2:30</p>
+                    <p>3:05</p>
                 </div>
             </div>
 
@@ -57,18 +57,18 @@
 
         <!-- Row 1 second div -->
         <div class="col-sm-3" style="position: relative;"> 
-            <img src="images/track2.png" alt="" class="img-fluid mt-3">
-            <img src="images/album_background2.png" alt="" class="img-fluid">
+            <img src="images/track2.png" alt="" class="img-fluid mt-3 rounded-top">
+            <img src="images/album_background2.png" alt="" class="img-fluid rounded-bottom">
 
             <!-- Song title -->
             <div class="col-12 row justify-content-between text-white fw-bold" style="position: absolute; top:10%;">
                 <div class="col-8">
-                    <p>Temperature</p>
-                    <p>SALEM</p>
+                    <p>Kenkele</p>
+                    <p>BUJU BNXN ft Wande Coal</p>
                 </div>
 
                 <div class="col-4">
-                    <img src="images/play.png" class="img-fluid" alt="play">
+                <a href="decoy2.php?track=10"><img src="images/play.png" class="img-fluid" alt="play"></a>
                 </div>
             </div>
 
@@ -82,7 +82,7 @@
 
                 <div class="col-5">
                     <p>Hiphop</p>
-                    <p>2:49</p>
+                    <p>3:34</p>
                 </div>
             </div>
 
@@ -90,18 +90,18 @@
 
         <!-- Row 1 third div -->
         <div class="col-sm-3" style="position: relative;">
-            <img src="images/track3.png" alt="" class="img-fluid mt-3">
-            <img src="images/album_background2.png" alt="" class="img-fluid">
+            <img src="images/track3.png" alt="" class="img-fluid mt-3 rounded-top">
+            <img src="images/album_background2.png" alt="" class="img-fluid rounded-bottom">
 
             <!-- Song title -->
             <div class="col-12 row justify-content-between text-white fw-bold" style="position: absolute; top:10%;">
                 <div class="col-8">
-                    <p>Ariya De</p>
-                    <p>KOLAPO</p>
+                    <p>Alajo Somolu</p>
+                    <p>BRYMO</p>
                 </div>
 
                 <div class="col-4">
-                    <img src="images/play.png" class="img-fluid" alt="play">
+                <a href="decoy2.php?track=12"><img src="images/play.png" class="img-fluid" alt="play"></a>
                 </div>
             </div>
 
@@ -115,7 +115,7 @@
 
                 <div class="col-5">
                     <p>Fuji</p>
-                    <p>4:37</p>
+                    <p>3:30</p>
                 </div>
             </div>
 
@@ -123,18 +123,18 @@
 
         <!-- Row 1 fourth div -->
         <div class="col-sm-3" style="position: relative;">
-            <img src="images/track4.png" alt="" class="img-fluid mt-3">
-            <img src="images/album_background2.png" alt="" class="img-fluid">
+            <img src="images/track4.png" alt="" class="img-fluid mt-3 rounded-top">
+            <img src="images/album_background2.png" alt="" class="img-fluid rounded-bottom">
 
             <!-- Song title -->
             <div class="col-12 row justify-content-between text-white fw-bold" style="position: absolute; top:10%;">
                 <div class="col-8">
-                    <p>Beautiful Life</p>
-                    <p>LADY KEM</p>
+                    <p>Loaded</p>
+                    <p>TIWA SAVAGE ft ASAKE</p>
                 </div>
 
                 <div class="col-4">
-                    <img src="images/play.png" class="img-fluid" alt="play">
+                <a href="decoy2.php?track=11"><img src="images/play.png" class="img-fluid" alt="play"></a>
                 </div>
             </div>
 
@@ -148,7 +148,7 @@
 
                 <div class="col-5">
                     <p>Jazz</p>
-                    <p>3:05</p>
+                    <p>2:37</p>
                 </div>
             </div>
 
@@ -168,7 +168,7 @@
 
         <!-- Row 2 first div -->
         <div class="col-sm-3" style="position: relative;">
-            <img src="images/artist1.png" alt="" class="img-fluid mt-3">
+            <img src="images/artist1.png" alt="" class="img-fluid mt-3 rounded">
             
             <!-- Artist and Likes -->
             <div class="col-12 row justify-content-between text-white" style="position: absolute; top:35%;">
@@ -186,7 +186,7 @@
 
         <!-- Row 2 second div -->
         <div class="col-sm-3" style="position: relative;">
-            <img src="images/artist2.png" alt="" class="img-fluid mt-3">
+            <img src="images/artist2.png" alt="" class="img-fluid mt-3 rounded">
             
             <!-- Artist and Likes -->
             <div class="col-12 row justify-content-between text-white" style="position: absolute; top:35%;">
@@ -204,7 +204,7 @@
 
         <!-- Row 2 third div -->
         <div class="col-sm-3" style="position: relative;">
-            <img src="images/artist3.png" alt="" class="img-fluid mt-3">
+            <img src="images/artist3.png" alt="" class="img-fluid mt-3 rounded">
             
             <!-- Artist and Likes -->
             <div class="col-12 row justify-content-between text-white" style="position: absolute; top:35%;">
@@ -222,7 +222,7 @@
 
         <!-- Row 2 fourth div -->
         <div class="col-sm-3" style="position: relative;">
-            <img src="images/artist4.png" alt="" class="img-fluid mt-3">
+            <img src="images/artist4.png" alt="" class="img-fluid mt-3 rounded">
             
             <!-- Artist and Likes -->
             <div class="col-12 row justify-content-between text-white" style="position: absolute; top:35%;">

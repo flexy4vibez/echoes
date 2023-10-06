@@ -31,7 +31,7 @@ include "header.php";
     ?>
     
     <div class="col-sm-3 mt-3" style="position: relative;">
-        <img src="<?php echo $data_fetched["cover_art"]; ?>" alt="" width="1000" class="img-fluid">
+        <img src="<?php echo $data_fetched["cover_art"]; ?>" alt="" width="1000" class="img-fluid rounded">
 
         <!-- Song title -->
         <div class="col-12 row justify-content-between text-white fw-bold" style="position: absolute; top:10%;">

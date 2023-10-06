@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="col-2 mt-2">
-                <h2>Echoes</h2>
+            <a href="index.php" style="text-decoration:none; color:black;"><h2>Echoes</h2></a>
             </div>
         </div>
 
