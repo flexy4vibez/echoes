@@ -107,9 +107,9 @@ include "session.php";
         <div class="col-sm-12 nav_background text-white fs-5 fw-bold" style="position: sticky; top:57%;">
 
           <div class="ms-5">
-            <a href="index.php" class="no_decoration"><p> <i class="bi bi-house-door"></i> Home</p></a>
-            <a href="all_artists.php" class="no_decoration"><p> <i class="bi bi-music-note"></i> Genres</p></a>
-            <a href="all_songs.php" class="no_decoration"><p> <i class="bi bi-music-note-beamed"></i> Top Albums</p></a>
+            <a href="index.php" style="text-decoration:none; color:white;"><p> <i class="bi bi-house-door"></i> Home</p></a>
+            <a href="all_artists.php" style="text-decoration:none; color:white;"><p> <i class="bi bi-music-note"></i> Genres</p></a>
+            <a href="all_songs.php" style="text-decoration:none; color:white;"><p> <i class="bi bi-music-note-beamed"></i> Top Albums</p></a>
             <p> <i class="bi bi-people-fill"></i> Friends</p>
             <p> <i class="bi bi-heart-fill"></i> Liked Songs</p>
             <p class="fs-6">Terms and Conditions</p>

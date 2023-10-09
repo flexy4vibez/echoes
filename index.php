@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="col-4">
-                    <a href="decoy2.php?track=9"><img src="images/play.png" class="img-fluid" alt="play"></a>
+                    <a href="decoy2.php?track=1"><img src="images/play.png" class="img-fluid" alt="play"></a>
                 </div>
             </div>
 
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="col-4">
-                <a href="decoy2.php?track=10"><img src="images/play.png" class="img-fluid" alt="play"></a>
+                <a href="decoy2.php?track=2"><img src="images/play.png" class="img-fluid" alt="play"></a>
                 </div>
             </div>
 
@@ -101,7 +101,7 @@
                 </div>
 
                 <div class="col-4">
-                <a href="decoy2.php?track=12"><img src="images/play.png" class="img-fluid" alt="play"></a>
+                <a href="decoy2.php?track=3"><img src="images/play.png" class="img-fluid" alt="play"></a>
                 </div>
             </div>
 
@@ -134,7 +134,7 @@
                 </div>
 
                 <div class="col-4">
-                <a href="decoy2.php?track=11"><img src="images/play.png" class="img-fluid" alt="play"></a>
+                <a href="decoy2.php?track=4"><img src="images/play.png" class="img-fluid" alt="play"></a>
                 </div>
             </div>
 

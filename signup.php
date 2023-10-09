@@ -1,10 +1,24 @@
 <?php
 include "session.php";
 
+if (!empty($_SESSION["record_found"])) {
+    header("location: index.php");
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = addslashes($_POST["email"]);
     $password = addslashes($_POST["password"]);
     $nickname = addslashes($_POST["nickname"]);
+
+    // Check if user exists
+    $sql_query = "SELECT email FROM users WHERE email = '$email'";
+    $result = mysqli_query($con, $sql_query);
+
+    if (mysqli_num_rows($result) > 0) {
+        $_SESSION["user_exist"] = "User already exists. Please, login.";
+        header("location: signin.php");
+        die;
+    }
 
     // Encrypt Password
     $encrypted_password = password_hash($password, PASSWORD_BCRYPT);
@@ -95,10 +109,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="col-sm-4">
                 <form method="post">
                     <label for="" class="form-label"><h5>What's your email</h5></label>
-                    <input type="email" name="email" required class="form-control" placeholder="Enter your email">
+                    <input type="email" name="email" minlength="2" maxlength="50" required class="form-control" placeholder="Enter your email">
 
                     <label for="" class="form-label mt-2"><h5>Create a password</h5></label>
-                    <input type="password" name="password" minlength="6" maxlength="20" required class="form-control" placeholder="Create a password">
+                    <input type="password" name="password" minlength="6" maxlength="50" required class="form-control" placeholder="Create a password">
 
                     <label for="" class="form-label mt-2"><h5>What should we call you?</h5></label>
                     <input type="text" name="nickname" maxlength="15" minlength="2" required class="form-control" placeholder="Enter a profile name">

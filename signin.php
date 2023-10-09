@@ -1,6 +1,10 @@
 <?php
 include "session.php";
 
+if (!empty($_SESSION["record_found"])) {
+    header("location: index.php");
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
@@ -52,6 +56,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo $_SESSION["signup_status"];
             session_destroy();
             }
+
+
+            if (!empty($_SESSION["user_exist"])) {
+                echo $_SESSION["user_exist"];
+                session_destroy();
+                }
             ?>
             </h3>
         </div>
@@ -121,10 +131,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="col-sm-4">
                 <form action="" method="post">
                     <label for="" class="form-label"><h5>Email</h5></label>
-                    <input type="email" name="email" id="" class="form-control" placeholder="Enter your email">
+                    <input type="email" name="email" minlength="2" maxlength="50" required id="" class="form-control" placeholder="Enter your email">
 
                     <label for="" class="form-label mt-2"><h5>Password</h5></label>
-                    <input type="password" name="password" id="" class="form-control" placeholder="Enter your password">
+                    <input type="password" name="password" minlength="6" maxlength="50" required id="" class="form-control" placeholder="Enter your password">
 
                     <div class="col-12 text-center">
                         <button class="btn btn-outline-danger background_orange text-white rounded-pill mt-2" type="submit">Sign in</button>

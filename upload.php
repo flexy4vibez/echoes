@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $genre = addslashes($_POST["genre"]);
     $title = addslashes($_POST["title"]);
     $artist = addslashes($_POST["artist"]);
+    $genre = addslashes($_POST["other_genre"]);
     
     
 
@@ -79,26 +80,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="col-sm-4">
                 <form method="post" enctype="multipart/form-data">
                     <label for="" class="form-label"><h5>Genre</h5></label>
-                    <select class="form-select form-select-sm" name="genre" required>
+                    <select class="form-select form-select-sm" name="genre" id="genre" required onchange="show_other()">
                     <option value="Hiphop">Hiphop</option>
                     <option value="Fuji">Fuji</option>
                     <option value="Jazz">Jazz</option>
                     <option value="R&B">R&B</option>
+                    <option value="Gospel">Gospel</option>
+                    <option value="Afro Beat">Afro Beat</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Rhythm and Blues">Rhythm and Blues</option>
+                    <option value="Raggae">Raggae</option>
+                    <option value="Country Music">Country Music</option>
+                    <option value="Classical">Classical</option>
+                    <option value="Other">Other</option>
                     </select>
 
+                    <div class="mt-2" id="other_genre" style="display: none;">
+                        <label for="" class="form-label"><h5>Specify the Genre</h5></label>
+                        <input type="text" name="other_genre" minlength="2" maxlength="90" class="form-control" placeholder="Genre">
+                    </div>
+
                     <label for="" class="form-label mt-2"><h5>Title</h5></label>
-                    <input type="text" name="title" minlength="2" maxlength="30" required class="form-control" placeholder="Song title">
+                    <input type="text" name="title" minlength="2" maxlength="90" required class="form-control" placeholder="Song title">
 
                     <label for="" class="form-label mt-2"><h5>Artist</h5></label>
-                    <input type="text" name="artist" maxlength="30" minlength="2" required class="form-control" placeholder="Artist">
+                    <input type="text" name="artist" maxlength="90" minlength="2" required class="form-control" placeholder="Artist">
                     
                     <div class="mt-2">
-                        <h5>Upload cover art</h5>
+                        <h5>Upload cover art (jpg, jpeg, png)</h5>
                         <input type="file" name="cover_art">
                     </div>
 
                     <div class="mt-2">
-                        <h5>Upload song</h5>
+                        <h5>Upload song (mp3)</h5>
                         <input type="file" name="song">
                     </div>
 
@@ -110,6 +125,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
 
+        <script>
+            function show_other() {
+               let genre = document.getElementById("genre").value;
+               let other_genre = document.getElementById("other_genre");
+
+               if (genre == "Other") {
+                other_genre.style.display = "block";
+               }
+               else {
+                other_genre.style.display = "none";
+               }
+            }
+        </script>
     
 </body>
 </html>
